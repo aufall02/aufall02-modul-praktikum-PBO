@@ -1,3 +1,4 @@
+package Materi;
 public class Array {
    String BilanganBulat[]; 
    int [] BilanganBulat1;
