@@ -1,23 +1,15 @@
 package LATIHAN2;
 
 public class TestArray {
-    public double average;
-    public int min,max;
-    public  int find;
-    public int [] list;
-
-    public void setlist(int [] list){
-        this.list = list;
-    }
+    private double average;
+    private int min,max;
+    private  int find; 
 
     public void setAverage(int [] list){
         double sum = 0.0;
         int length = list.length;
-        // for (int i=0; i<equal.length; i++){
-        // sum += equal[i];
         for (double num : list){
             sum += num;
-            // System.out.println(sum);
         }
       average = sum / length;
     }
@@ -26,19 +18,16 @@ public class TestArray {
     return average;
     }
 
-    // public void setshort(int [] list){
-    //     Arrays.sort(list);
-    //     max = list[list.length-1];
-    //     min = list[0];
-    //     list = null;
-    // }
     public void setMax(int [] list){
         int max = list[0];
         for (int i=0 ; i<list.length; i++)
-            if (list[i]>max)
-                max= list[i];
-            this.max = max; // return max;
+        if (list[i]>max)
+        max= list[i];
+        this.max = max; // return max;
         
+    }
+    public int getmax(){
+        return max;
     }
     public void setMin(int [] list){
         for (int i=0 ; i<list.length; i++){
@@ -52,15 +41,8 @@ public class TestArray {
     }
         
     }
-
-    private int extracted() {
-        return min;
-    }
-    public int getmax(){
-        return max;
-    }
     public int getmin(){
-        return extracted();
+        return min;
     }
     public   void setFindIndex(int [] list){
         for (int i=0; i<list.length;i++){
@@ -69,7 +51,6 @@ public class TestArray {
             }
         }
         }
-    
 
     public int getFindIndex(){
         return find;
@@ -98,7 +79,7 @@ public class TestArray {
     public void tampil(int a){
         System.out.println(a);
     }
-     public void tampil(Double a){
+    public void tampil(Double a){
         System.out.println(a);
     }
 
@@ -116,16 +97,11 @@ public class TestArray {
         data = null;
 
     }
-
     public void hapus(){
         average = 0;
         min= 0;
         max = 0;
     }
-
-
-
-
 
 }
 
