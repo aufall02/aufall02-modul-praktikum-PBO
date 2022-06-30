@@ -28,7 +28,7 @@ public class Array2 {
     }
 
     public void tampil(double[] list){
-        String data = "";
+        String data = " " ;
         for (int i=0; i<list.length; i++){
             if (i==0){
                 data += list[i];
@@ -46,7 +46,7 @@ public class Array2 {
             if (i==0){
                 data += a[i];
             } else {
-                data += " , "+a[i];
+                data +=  " , "+a[i];
             }
         }
         System.out.println(data);

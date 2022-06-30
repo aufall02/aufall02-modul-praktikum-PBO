@@ -2,7 +2,7 @@ package LATIHAN4;
 
 public class Array {
     private int [][] A,B,hasil ;
-    // private int[][] hasilkali ;
+    private double[][] hasilkali ;
 
     public void setA(int[][] a) {
         A = a;
@@ -31,7 +31,34 @@ public class Array {
     public int[][] getHasil() {
         return hasil;
     }
+    public  void setHasilkali(int [][] hasil,double a){
+        hasilkali = new double[hasil.length][hasil[0].length];
+
+        int i,j;
+        for (i = 0; i< hasil.length; i++){
+            for (j=0 ; j< hasil[i].length; j++){
+                this.hasilkali[i][j] = a*(double)hasil[i][j];
+            }
+        }
+    }
+
+    public double[][] getHasilkali() {
+        return hasilkali;
+    }
+
     public void tampil(int data[][]){
+        // mendeklarasikan baris dan kolom
+        int i,j; //baris dan kolom
+
+        for (i=0 ; i<data.length; i++){
+            for (j=0;j<data[i].length;j++){
+                System.out.print(data[i][j]+" ");
+            }
+            System.out.println();
+        }
+        data = null;
+    }
+    public void tampil(double data[][]){
         // mendeklarasikan baris dan kolom
         int i,j; //baris dan kolom
 
